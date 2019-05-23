@@ -1,29 +1,54 @@
 const express=require('express');
 const bodyParser=require('body-parser');
+
 const app=express();
+const port=9000;
+
+
+
 
 app.use(bodyParser.urlencoded({extended:true}))
-const port=3000;
+
+const db=require('./src/models/index.js');
+//const handle=require('./handlers');
+
+const db12=require('./src/models/index');
+var promise1=db12.connectDb();
+
+
 
 
 
 app.get('/',(req,res)=>res.send ('server is ready send the data'));
-
+//listing to form of index.html
 app.get('/form',(req,res)=>{
-    res.sendFile('/Users/shrutika/Desktop/hi/Server/'+'index.html')
+    res.sendFile('/Users/shrutika/Desktop/jack_my_motor/Server/'+'index.html')
     });
-
+//displaying the output of form 
 app.post('/optionsss',(req,res)=>{
 res.send(req.body);
 console.log(req.body);
-})
+});
 
-app.use((req,res,next)=>{
-  const err= new Error('not found');
-  err.status=404;
-  next(err);
 
-})
+
+
+/*promise1.then(async()=>{
+    app.listen(port,()=>
+        console.log(`listening at ${port}`),
+    );
+});
+*/
+
+
+
+
+
+
+
+
+//app.use(handle.notFound);
+//app.use(handle.errors);
 
 
 
