@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 mongoose.set('debug',true);
 mongoose.Promise=global.Promise;
-const mongo_url='mongodb://localhost:27017/jack-my-motor'
+const mongo_url='mongodb://localhost:27017/jack_my_motor'
 
 
 //module.exports.connectDb=()=>{
@@ -16,9 +16,9 @@ mongoose.connect(mongo_url).then(async() =>{
 });
 }
 */
-
+const eraseDatabaseOnSync = true;
 module.exports.connectDb=()=>{
-    mongoose.connect(mongo_url).then(async() =>{
+    mongoose.connect(mongo_url,{ useNewUrlParser: true }).then(async() =>{
         if (eraseDatabaseOnSync) {
             await Promise.all([
               models.User.deleteMany({}),
@@ -42,7 +42,7 @@ module.exports.connectDb=()=>{
         });
       
         const message1 = new models.Message({
-          text: 'Published the Road to learn React',
+          text: 'Published',
           user: user1.id,
         });
       
