@@ -42,7 +42,7 @@ console.log(req.body);
 
 //app.use(handle.notFound);
 //app.use(handle.errors);
-app.listen(port,console.log(`server listening at port :${port}`));
+app.listen(process.env.PORT || 3000 ,console.log(`server listening at port :${port}`));
 
 
 
