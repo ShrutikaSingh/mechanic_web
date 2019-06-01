@@ -39,6 +39,11 @@ class NavBar extends Component{
                          Login
                     </button>
                 </Link> 
+                <Link to='/signup' className="nav-link">
+                    <button>
+                         Sign Up
+                    </button>
+                </Link> 
             </nav>
           </React.Fragment>  
         );
