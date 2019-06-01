@@ -4,11 +4,12 @@ const mongoose=require('mongoose');
 const userSchema = new mongoose.Schema({
     username:{
         type:String,
-        require:true,
+        required:true,
     },
     password:{
         type:String,
         reuired:true,
+        min:10,
     },
     created:{
         type:Date,
@@ -17,6 +18,7 @@ const userSchema = new mongoose.Schema({
     service:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Service',
+        required:true,
     }], 
 });
 
