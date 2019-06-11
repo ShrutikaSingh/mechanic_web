@@ -12,19 +12,7 @@ import Signup from './components/signup';
 class App extends Component {
   render(){
   return(
-    <React.Fragment>
-   
-      <NavBar></NavBar>
-
-      <Switch>
-          <Route exact path="/" component={ServiceList}></Route> 
-          <Route  path="/details" component={Details}></Route>
-          <Route  path="/cart" component={Cart}></Route>
-          <Route  path="/signup" component={Signup}></Route>
-          <Route  component={Default}></Route>
-      </Switch>
-
-    </React.Fragment>
+   <h1>SHopping summary</h1>s
     
   )
  }
