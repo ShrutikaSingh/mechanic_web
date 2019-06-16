@@ -8,12 +8,18 @@ import Details from './components/details';
 import Cart from './components/cart';
 import Default from './components/default';
 import Signup from './components/signup';
-
+import SlideShow from './components/slideshow';
+import Info from './components/info';
+import CarouselMain from './components/carousel';
 class App extends Component {
   render(){
   return(
-   <h1>SHopping summary</h1>s
-    
+         <React.Fragment>
+              <NavBar/>
+              
+              <CarouselMain/>
+             
+        </React.Fragment>
   )
  }
 }
