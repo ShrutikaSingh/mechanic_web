@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../logo.jpg';
+import ligo from '../logo.jpg';
 import styled from 'styled-components';
 import {ButtonContainer} from './Button';
 class NavBar extends Component{
@@ -9,7 +9,7 @@ class NavBar extends Component{
           <React.Fragment>
             <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-small-5">
                 <Link to='/details'>
-                    <img src={logo} alt="services" className="navbar-brand" height="50px"></img>
+                    <img src={ligo} alt="services" className="navbar-brand" height="50px"></img>
                 </Link>  
 
                 <h4 color="white">JACK MY MOTOR</h4>

@@ -2,22 +2,24 @@ import React,{Component} from 'react';
 import ReactDom from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
-
+import {Row,Col} from 'react-bootstrap';
+import ligo from '../logo.jpg';
+import hi from '../logo.png';
+import earth from '../img/earth.png';
 class CarouselMain extends Component{
     render(){
         return(
             <React.Fragment>
             <Carousel>
                 <div>
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nY4t5Jgy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/ce0rln8gpe1rppwj7udi.png"/>
-                    <p className="first">Welcome to jack my motor</p>
+                    <img src={ligo} alt="services" className="navbar-brand" height="800px"></img>    
                 </div>
                 <div>
-                    <img src="../logo.jpg"/>
+                    <img src={ hi}/>
                     <p className="second">Second slide</p>
                 </div>
                 <div>
-                    <img src="../logo.png"/>
+                    <img src={earth}/>
                     <p className="third">Third slide</p>
                 </div>
             </Carousel>
@@ -25,5 +27,7 @@ class CarouselMain extends Component{
         );
     }
 }
+
+
 
 export default CarouselMain;

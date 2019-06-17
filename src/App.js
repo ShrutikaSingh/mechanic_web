@@ -11,6 +11,7 @@ import Signup from './components/signup';
 import SlideShow from './components/slideshow';
 import Info from './components/info';
 import CarouselMain from './components/carousel';
+
 class App extends Component {
   render(){
   return(
@@ -18,6 +19,8 @@ class App extends Component {
               <NavBar/>
               
               <CarouselMain/>
+              
+              <columns/>
              
         </React.Fragment>
   )
