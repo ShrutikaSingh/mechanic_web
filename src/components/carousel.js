@@ -12,7 +12,7 @@ class CarouselMain extends Component{
                 <Container>
                     <Row>
                         <Col lg="12" xs='12' sm='6' md='8'>
-                                 <img src={earth} alt="services" width="100%"></img>  
+                                 <img src={earth} alt="services" fluid></img>  
                          </Col>
                     </Row>
                 </Container> 
