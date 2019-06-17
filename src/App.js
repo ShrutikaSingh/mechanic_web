@@ -17,12 +17,12 @@ class App extends Component {
   return(
          <React.Fragment>
               <NavBar/>
-              
+           
               <CarouselMain/>
-              
-              <columns/>
              
+              <p>fdgdg</p>
         </React.Fragment>
+        
   )
  }
 }
