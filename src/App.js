@@ -17,10 +17,7 @@ class App extends Component {
   return(
          <React.Fragment>
               <NavBar/>
-           
-              <CarouselMain/>
-             
-              <p>fdgdg</p>
+              <CarouselMain/> 
         </React.Fragment>
         
   )
