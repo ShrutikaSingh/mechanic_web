@@ -19,6 +19,15 @@ class App extends Component {
          <React.Fragment>
               <NavBar/>
               <CarouselMain/> 
+
+
+              <div class="col-lg-12 text-center text-space">
+                  <h2 class="g-header-text">Get over 500 car repair services at your home or office</h2>
+                  
+
+              </div>
+
+
               <hr></hr>
               <Cards/>
         </React.Fragment>
