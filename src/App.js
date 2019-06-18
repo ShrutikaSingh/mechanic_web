@@ -11,6 +11,7 @@ import Signup from './components/signup';
 import SlideShow from './components/slideshow';
 import Info from './components/info';
 import CarouselMain from './components/carousel';
+import Cards from './components/cards';
 
 class App extends Component {
   render(){
@@ -18,6 +19,8 @@ class App extends Component {
          <React.Fragment>
               <NavBar/>
               <CarouselMain/> 
+              <hr></hr>
+              <Cards/>
         </React.Fragment>
         
   )
