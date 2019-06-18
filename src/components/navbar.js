@@ -21,7 +21,7 @@ class NavBar extends Component{
                         <Link to='/about' className="nav-link"> About</Link>
                      </li>
                      <li className="nav-item ml-5">
-                        <Link to='/' className="nav-link"> Services</Link>
+                        <Link to='/service' className="nav-link"> Services</Link>
                      </li>
                 </ul>
                 <Link to='/cart' className="ml-auto">
