@@ -27,9 +27,6 @@ module.exports.connectDb=()=>{
         
             createUsersWithMessages();
           }
-
-
-
         console.log("mongo database connected");
     
     });
