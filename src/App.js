@@ -12,12 +12,15 @@ import SlideShow from './components/slideshow';
 import Info from './components/info';
 import CarouselMain from './components/carousel';
 import Cards from './components/cards';
+import AppNavbar from './components/nav_bar_reactstrap';
 
 class App extends Component {
   render(){
   return(
          <React.Fragment>
-              <NavBar/>
+           
+            
+              <AppNavbar/>
               <CarouselMain/> 
               <hr></hr>
               <div class="col-lg-12 text-center text-space mt-10 ">
