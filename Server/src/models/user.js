@@ -22,6 +22,7 @@ const userSchema = new mongoose.Schema({
     }], 
 });
 
+//read bcryptjs documentation
 //INSTALL BCRYPT
 //>npm install bcryptjs
 userSchema.pre('save', async function(next){
@@ -38,5 +39,17 @@ this.password= hashed;
     return next(err);
 }
 });
-module.exports=mongoose.model('User',userSchema)
 
+
+//we also need a way to check if the password are all the same
+//in try block we actually need to compare the new attempt bcrypted password to actual bcrypted password stored in database
+
+userSchema.methods.comparePassword=async function(attempt,next){
+    try{
+        return await bcrypt.compare(attempt,this.password);//it will return a boolean
+    }catch(err){
+        next(err);
+    }
+};
+
+module.exports=mongoose.model('User',userSchema)
