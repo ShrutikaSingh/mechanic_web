@@ -2,13 +2,33 @@ const mongoose=require('mongoose');
 mongoose.set('debug',true);
 mongoose.Promise=global.Promise;
 const mongo_url='mongodb://localhost:27017/jack_my_motor'
+mongoose.connect(mongo_url);
+
+module.exports.Service=require('./services');
+module.exports.User=require('./user');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //module.exports.connectDb=()=>{
 //mongoose.connect(mongo_url);
 //}
 
-/*ß
+/*
 module.exports.connectDb=()=>{
 mongoose.connect(mongo_url).then(async() =>{
     console.log("mongo database connected");
@@ -16,6 +36,9 @@ mongoose.connect(mongo_url).then(async() =>{
 });
 }
 */
+
+
+/*
 const eraseDatabaseOnSync = true;
 module.exports.connectDb=()=>{
     mongoose.connect(mongo_url,{ useNewUrlParser: true }).then(async() =>{
