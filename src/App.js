@@ -17,9 +17,7 @@ import AppNavbar from './components/nav_bar_reactstrap';
 class App extends Component {
   render(){
   return(
-         <React.Fragment>
-           
-            
+         <React.Fragment> 
               <AppNavbar/>
           
               <CarouselMain/> 
