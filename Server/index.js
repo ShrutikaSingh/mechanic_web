@@ -9,11 +9,8 @@ const port=process.env.PORT;
 
 app.use(bodyParser.urlencoded({extended:true}))
 
-const db=require('./src/models/index.js');
+const db=require('./src/models');
 //const handle=require('./handlers');
-
-const db12=require('./src/models/index');
-var promise1=db12.connectDb();
 
 app.get('/',(req,res)=>res.send ('server is ready send the data'));
 //listing to form of index.html
