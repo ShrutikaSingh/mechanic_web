@@ -21,6 +21,7 @@ class App extends Component {
            
             
               <AppNavbar/>
+          
               <CarouselMain/> 
               <hr></hr>
               <div class="col-lg-12 text-center text-space mt-10 ">
