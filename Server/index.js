@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({extended:true}))
 const db=require('./src/models');
 //const handle=require('./handlers');
 
+const routes=require('./src/routes');
+
+
 app.get('/',(req,res)=>res.send ('server is ready send the data'));
 //listing to form of index.html
 app.get('/form',(req,res)=>{
@@ -22,6 +25,9 @@ app.post('/optionsss',(req,res)=>{
 res.send(req.body);
 console.log(req.body);
 });
+
+app.use('/api/auth',routes.auth);
+
 
 /*promise1.then(async()=>{
     app.listen(port,()=>
