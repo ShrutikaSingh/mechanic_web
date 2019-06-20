@@ -3,10 +3,18 @@ import {Row,Col,Container} from 'react-bootstrap';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import pic1 from '../img/auto.png';
 
+const divStyle = {
+    color: 'blue',
+    paddingTop: '50px',
+    
+    paddingBottom:'5%'
+  };
+  
+
 export default class Cards extends Component{
 render(){
     return(
-        <Container>
+        <Container style={divStyle}>
             <Row>
                 <Col sm={12} lg={4}>
                     <Card2 title="WE MAKE IT EASY" body="Get a quote and book a service online 24/7. Our mechanics will come to your home or office, even on evenings and weekends."/>
@@ -29,7 +37,7 @@ class Card2 extends Component{
         return(
 
         <Card>
-            <CardImg top width='100%' src={pic1}></CardImg>
+            <CardImg top width='100%' src={pic1}  ></CardImg>
             <CardBody>
                 <CardTitle>{this.props.title}</CardTitle>
                 <CardText>
