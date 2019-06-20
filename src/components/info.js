@@ -22,11 +22,18 @@ class Info extends Component{
     }
 }
 
+const divStyle = {
+  color: 'blue',
+  paddingTop: '50px',
+  paddingLeft:'40%',
+  paddingBottom:'5%'
+};
+
 class Data extends Component{
     render(){
         return(
             <React.Fragment>
-            <img alt="Convenience" class="icon" src={this.props.img_link} ></img>
+            <img style={divStyle} alt="Convenience" class="icon" src={this.props.img_link}  ></img>
             <div class="text-center">
              <h5>{this.props.body}</h5>
             </div>
