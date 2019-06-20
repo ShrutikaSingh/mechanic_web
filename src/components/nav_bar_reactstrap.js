@@ -40,15 +40,27 @@ class AppNavbar extends Component{
                                         </DropdownToggle>
                                         <DropdownMenu>
                                         <DropdownItem>
-                                            Option 1
+                                            Reapir
                                         </DropdownItem>
                                         <DropdownItem>
-                                            Option 2
+                                            Service
                                         </DropdownItem>
-                                        <DropdownItem  />
                                         <DropdownItem>
-                                           Option 3
+                                           Car Towing
                                         </DropdownItem>
+                                        <DropdownItem>
+                                            Used Car Detailing
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Service Packages
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                         Spares & Accessories
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Insurance & Finance
+                                        </DropdownItem>
+                                       
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
                                 </li>
