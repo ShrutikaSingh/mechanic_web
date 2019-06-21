@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-
+import AppNavbar from '../nav_bar_reactstrap';
 class AboutUs extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
+        <AppNavbar/>
        About Us
-      </div>
+     
+      </React.Fragment>
     )
   }
 }

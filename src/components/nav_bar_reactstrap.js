@@ -4,6 +4,15 @@ import ligo from '../logo.jpg';
 import {ButtonContainer} from './Button';
 import {Link} from 'react-router-dom';
 
+
+function About() {
+    return <h2>About</h2>;
+  }
+  
+  function Users() {
+    return <h2>Users</h2>;
+  }
+  
 class AppNavbar extends Component{       
             constructor(props){
                  super(props);
@@ -20,6 +29,7 @@ class AppNavbar extends Component{
 
     render(){
         return(
+           
             <Navbar  color="light" light expand="md">
                 <NavLink to='/details'>
                         <img src={ligo} alt="services" className="navbar-brand" height="50px"></img>
@@ -31,7 +41,7 @@ class AppNavbar extends Component{
                         <NavItem>
                             <ul className='navbar-nav align-items-center'>
                                 <li className="nav-item ml-2"> 
-                                <Link to='/' className="nav-link"> Home</Link>
+                                <Link to='/home' className="nav-link"> Home</Link>
                                  </li>
                                 <li>
                                     <UncontrolledDropdown nav inNavbar>
@@ -75,8 +85,6 @@ class AppNavbar extends Component{
                                 <li className="nav-item ml-2">
                                     <NavLink to='/service' className="nav-link"> Contact</NavLink>
                                 </li>
-                            
-                           
                                 <li className="nav-item ml-2">  
                                     <NavLink to='/login' className="nav-link">
                                         <button>Login</button>
@@ -97,11 +105,12 @@ class AppNavbar extends Component{
                                     </NavLink>
                                 </li>
               </ul>
-
                         </NavItem>
                     </Nav>
+   
                 </Collapse>
             </Navbar>
+       
         
             )
         }
