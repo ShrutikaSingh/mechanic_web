@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppNavbar from '../nav_bar_reactstrap';
-import Form from '../s_form';
+import Form from '../register';
 class AboutUs extends Component {
   render() {
     return (
