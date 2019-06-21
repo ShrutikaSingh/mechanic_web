@@ -5,7 +5,7 @@ import Info from './info';
 import CarouselMain from './carousel';
 import Cards from './cards';
 //import Routers from './router/routes';
-import S_Form from './s_form';
+
 import AppNavBar from './nav_bar_reactstrap';
 
 const divStyle = {
@@ -23,7 +23,6 @@ class Home extends Component {
                 </div>
                 <Info/>
                 <Cards/>
-                <S_Form/>
                 <div class="col-lg-4 col-md-5 col-sm-6 col-centered"><a class="btn-orange-fill" href="/about/">GET AN INSTANT QUOTE</a></div>
           </React.Fragment>
     )
