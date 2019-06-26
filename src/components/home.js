@@ -6,7 +6,7 @@ import CarouselMain from './carousel';
 import Cards from './cards';
 //import Routers from './router/routes';
 
-import AppNavBar from './nav_bar_reactstrap';
+
 
 const divStyle = {
   paddingTop: '50px',
@@ -15,8 +15,7 @@ const divStyle = {
 class Home extends Component {
     render(){
     return(
-           <React.Fragment> 
-               <AppNavBar/>
+           <React.Fragment>      
                 <CarouselMain/> 
                 <div class="col-lg-12 text-center text-space mt-200" style={divStyle}>
                     <h2 class="g-header-text">Get over 500 car repair services at your home or office</h2>
