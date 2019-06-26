@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Row,Col,Container} from 'reactstrap';
+
 class Info extends Component{
     render(){
         return(
