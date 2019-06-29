@@ -6,27 +6,42 @@ export default class Example extends React.Component {
     return (
       <Container>
       <Form>
+        <FormGroup>
+          <Label for="exampleAddress">Username</Label>
+          <Input type="text" name="address" id="exampleAddress" placeholder="username"/>
+        </FormGroup>
         <Row form>
           <Col md={6}>
             <FormGroup>
               <Label for="exampleEmail">Email</Label>
-              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+              <Input type="email" name="email" id="exampleEmail" placeholder="abc@gmail.com" />
             </FormGroup>
           </Col>
           <Col md={6}>
             <FormGroup>
               <Label for="examplePassword">Password</Label>
-              <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+              <Input type="password" name="password" id="examplePassword" placeholder="password " />
             </FormGroup>
           </Col>
         </Row>
+        <Row form>
+        <Col md={6}>
+        <FormGroup>
+          <Label for="exampleAddress">Model Type</Label>
+          <Input type="text" name="address" id="exampleAddress" placeholder="2 Wheller Or 4 wheeler"/>
+        </FormGroup>
+        </Col>
+        <Col md={6}>
+        <FormGroup>
+          <Label for="exampleAddress">Model Name</Label>
+          <Input type="text" name="address" id="exampleAddress" placeholder="eg. Hyundai"/>
+        </FormGroup>
+        </Col>
+        </Row>
+
         <FormGroup>
           <Label for="exampleAddress">Address</Label>
           <Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleAddress2">Address 2</Label>
-          <Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
         </FormGroup>
         <Row form>
           <Col md={6}>
