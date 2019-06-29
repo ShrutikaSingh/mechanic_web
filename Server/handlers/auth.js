@@ -1,6 +1,5 @@
 const jwt=require('jsonwebtoken');
-SECRET='temporary secret';
-require('dotenv').config();
+
 const db = require('../models');//it comes from model directory//before anything we will be needing our database
 //so we are using our db that will be asynchronous
 
@@ -13,7 +12,7 @@ try{
  const user= await db.User.create(req.body);//we need to create user i register since currently our database has no users & we r gonna create user using based on the body of request
  const {id,username}=user;
 
-const token=jwt.sign({id,username}.process.env.SECRET);
+const token=jwt.sign({id,username},process.env.SECRET);
 // const token=jwt.sign({id,username}.SECRET);
 res.status(201).json({id,username,token});//200 for default ok //201 means somthing has been created
 }
@@ -34,7 +33,7 @@ exports.login= async (req,res,next) => {
     const valid= await user.comparePassword(req.body.password); //match the password of the req.body that we get
 
     if(valid){ //if the valid returns true we will return id and username
-       const token=jwt.sign({id,username}.process.env.SECRET);
+       const token=jwt.sign({id,username},process.env.SECRET);
        //const token=jwt.sign({id,username}.SECRET);
         res.json({
             id,
