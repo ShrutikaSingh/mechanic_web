@@ -38,7 +38,7 @@ exports.login= async (req,res,next) => {
         res.json({
             id,
             username,
-            token   //weare sending the token also
+            token   //weare sending the token also in response
         });
         console.log('Login successfull');
     }
