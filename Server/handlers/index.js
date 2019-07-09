@@ -1,8 +1,10 @@
 module.exports=require('./auth.js');
 //#002
 module.exports = {
-    ...require('./auth'), //... spread operater so as to spread out every individual handler inside of auth
+    ...require('./auth'), //... spread operater so as to spread out every individual handler inside of auth {refers to the file handlers/auth.js}
+    ...require('./poll')//for importing poll.js from handlers/poll.js
 };
+
 
 
 //next is ver imp to errors
