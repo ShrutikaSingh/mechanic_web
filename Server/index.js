@@ -23,7 +23,7 @@ app.get('/',(req,res)=>res.json ({hello :'worlds'}));//json object //start listi
 app.use('/api/auth',routes.auth);//sending all the route for this endpoint here and routes.auth will take care of all the auth
 //go to postman to see the users  and post {"username":"ff","password":"ydfuesfrdttyefa"} to localhost:port_number/api/auth/login in the body
 //and localhost:5000/api/auth/register to register a new user  using new {"username":"tufdyhuetrtrehi","password":"ydfuesrttyefa"} and post
-
+app.use('/api/poll',routes.poll);
 app.use(handle.notFound);   //not found is coming from handler/index.js
 
 //app.use( handle.errors);    //this errorHandler errors is coming from handler/index.js//const port= process.env.PORT; //it will take the PORT variable from .env
@@ -32,7 +32,7 @@ app.use(handle.notFound);   //not found is coming from handler/index.js
 
 
 
-app.listen(process.env.PORT,console.log(`server is ready`));
+app.listen(port,console.log(`server is ready to listen at ${port}`));
 
 
 
