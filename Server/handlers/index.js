@@ -1,4 +1,4 @@
-module.exports=require('./auth.js');
+//module.exports=require('./auth.js');
 //#002
 module.exports = {
     ...require('./auth'), //... spread operater so as to spread out every individual handler inside of auth {refers to the file handlers/auth.js}

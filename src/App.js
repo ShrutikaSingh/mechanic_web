@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import api from './services/api';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';//how did this comeß
 
@@ -6,7 +7,18 @@ import Routes from './router/chck_routes';
 import AppNavBar from './components/nav_bar_reactstrap';
 import Footer from './components/footer/footer';
 import CopyRight from './components/copyright/copyright';
+
+
 class App extends Component {
+
+  async componentDidMount()
+    {
+      const result= api.call('post','auth/login',{
+        username:'username',
+        password:'password'
+      });
+      console.log(result);
+    }
   render(){
   return(
          <React.Fragment> 

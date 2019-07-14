@@ -79,6 +79,7 @@ exports.vote= async(req,res,next)=>{
                 poll.voted.filter(user => user.toString() === userId).length,
               );
         }
+
     }
     catch(err){
         err.status=400;

@@ -1,2 +1,2 @@
 cd server && nodemon &
-cd client && npm start
+cd src && npm start
