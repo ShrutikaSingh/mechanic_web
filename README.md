@@ -68,3 +68,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 # jack_my_motor
 # jack_my_motor  ,an ola like app for repairing the vehicles parts
+# client side for mechanic appp

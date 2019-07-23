@@ -2,16 +2,18 @@ import React,{Component} from 'react';
 import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavLink,NavItem,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem} from 'reactstrap';
 import ligo from '../logo.jpg';
 import {ButtonContainer} from './Button';
-import {Link} from 'react-router-dom';
 
 
-function About() {
-    return <h2>About</h2>;
-  }
-  
-  function Users() {
+import Home from '../components/home';
+import About from '../components/about/about';
+import Register from '../components/register';
+import Login from "../components/Auth";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+function Users() {
     return <h2>Users</h2>;
   }
+
   
 class AppNavbar extends Component{       
             constructor(props){
@@ -29,7 +31,7 @@ class AppNavbar extends Component{
 
     render(){
         return(
-           
+            <Router>
             <Navbar  color="light" light expand="md">
                 <NavLink to='/details'>
                         <img src={ligo} alt="services" className="navbar-brand" height="50px"></img>
@@ -39,6 +41,7 @@ class AppNavbar extends Component{
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
+                        
                             <ul className='navbar-nav align-items-center'>
                                 <li className="nav-item ml-2"> 
                                 <Link to='/home' className="nav-link"> Home</Link>
@@ -74,42 +77,49 @@ class AppNavbar extends Component{
                                     <Link to='/book-service' className="nav-link"> Book My Service</Link>
                                 </li>
                                 <li className="nav-item ml-2">
-                                    <Link to='/about' className="nav-link"> About Us</Link>
+                                    <Link to='/about/' className="nav-link"> About Us</Link>
                                 </li>
                                 <li className="nav-item ml-2">
-                                    <Link to='/howitworks' className="nav-link"> How It Works</Link>
+                                    <Link to='/howitworks/' className="nav-link"> How It Works</Link>
                                 </li>
                                 <li className="nav-item ml-2">
-                                    <NavLink to='/about' className="nav-link"> Fair Pricing</NavLink>
+                                    <Link to='/users/' className="nav-link"> Fair Pricing</Link>
                                 </li>
                                 <li className="nav-item ml-2">
-                                    <NavLink to='/service' className="nav-link"> Contact</NavLink>
+                                    <Link to='/service/' className="nav-link"> Contact</Link>
                                 </li>
                                 <li className="nav-item ml-2">  
-                                    <NavLink to='/login' className="nav-link">
+                                    <Link to='/login/' className="nav-link">
                                         <button>Login</button>
-                                    </NavLink> 
+                                    </Link> 
                                 </li>
                                 <li className="nav-item ml-2"> 
-                                    <NavLink to='/signup' className="nav-link">
+                                    <Link to='/register/' className="nav-link">
                                         <button> Sign Up</button>
-                                    </NavLink> 
+                                    </Link> 
                                 </li>
                                 <li className="nav-item ml-2"> 
-                                    <NavLink to='/cart'>
+                                    <Link to='/cart/'>
                                         <ButtonContainer>
                                             <span>
                                             <i className='fas fa-cart-plus' />
                                             </span> Cart
                                         </ButtonContainer>
-                                    </NavLink>
+                                    </Link>
                                 </li>
-              </ul>
+                            </ul>
+                            
                         </NavItem>
                     </Nav>
-   
+                    
                 </Collapse>
             </Navbar>
+            <Route path="/home" component={Home} />
+            <Route path="/about/" component={About} />
+            <Route path="/users/" component={Users} />
+            <Route path="/register/" component={Register} />
+            <Route path="/login/" component={Login}/>
+            </Router>
        
         
             )
